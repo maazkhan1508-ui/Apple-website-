@@ -1,320 +1,562 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+/* =========================
+   BASIC SETTINGS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-    font-family:Arial,sans-serif;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #1d1d1f;
 }
 
-.navbar{
-    height:44px;
-    background:#161617;
-    position:sticky;
-    top:0;
-    z-index:100;
+a {
+    text-decoration: none;
 }
 
-.nav-container{
-    max-width:1100px;
-    height:44px;
-    margin:auto;
-    padding:0 15px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    width: 100%;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    background-color: rgba(255, 255, 255, 0.95);
+
+    border-bottom: 1px solid #eeeeee;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 10;
 }
 
-.logo{
-    width:18px;
-    height:22px;
-    display:flex;
-    align-items:center;
+.apple-logo {
+    font-size: 18px;
+    font-weight: bold;
 }
 
-.logo svg{
-    width:18px;
-    height:22px;
+.nav-links {
+    display: flex;
+    gap: 25px;
 }
 
-.nav-links{
-    display:flex;
-    align-items:center;
-    gap:23px;
+.nav-links a {
+    color: #333;
+    font-size: 13px;
 }
 
-.nav-links a,
-.nav-icons a{
-    color:#fff;
-    text-decoration:none;
-    font-size:11px;
+.nav-links a:hover {
+    color: #0071e3;
 }
 
-.nav-icons{
-    display:flex;
-    gap:18px;
+.nav-icons {
+    display: flex;
+    gap: 20px;
 }
 
-#menu{
-    display:none;
+.nav-icons span {
+    font-size: 18px;
 }
 
-.menu-btn{
-    display:none;
-    color:white;
-    font-size:22px;
-    cursor:pointer;
+
+/* =========================
+   TOP BANNER
+========================= */
+
+.top-banner {
+    background-color: #f5f5f7;
+
+    text-align: center;
+
+    padding: 12px;
+
+    font-size: 14px;
 }
 
-.mobile-menu{
-    display:none;
+.top-banner p {
+    display: inline-block;
+    margin-right: 10px;
 }
 
-.hero{
-    text-align:center;
-    overflow:hidden;
-    padding-top:40px;
+.top-banner a {
+    color: #0066cc;
 }
 
-.black{
-    background:#000;
-    color:white;
-    min-height:600px;
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    width: 100%;
+    min-height: 650px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    padding: 60px 20px;
 }
 
-.light{
-    background:#f5f5f7;
-    color:#1d1d1f;
-    min-height:620px;
-    border-top:8px solid white;
+.hero-content {
+    max-width: 700px;
+    margin-bottom: 35px;
 }
 
-.hero h1{
-    font-size:42px;
+.hero h1 {
+    font-size: 55px;
+    margin-bottom: 10px;
 }
 
-.hero p{
-    font-size:21px;
-    margin:7px 0;
+.hero h2 {
+    font-size: 28px;
+    font-weight: normal;
+    margin-bottom: 15px;
 }
 
-.buttons{
-    display:flex;
-    justify-content:center;
-    gap:12px;
-    margin:15px 0;
+.hero p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 25px;
 }
 
-.buttons a{
-    padding:9px 20px;
-    border-radius:25px;
-    text-decoration:none;
-    font-size:14px;
+.hero img {
+    width: 600px;
+    max-width: 90%;
 }
 
-.blue{
-    background:#0077ed;
-    color:white;
+
+/* iPhone */
+
+.iphone {
+    background-color: #f5f5f7;
 }
 
-.outline{
-    color:#0077ed;
-    border:1px solid #0077ed;
+
+/* iPad */
+
+.ipad {
+    background-color: #000;
+    color: white;
 }
 
-.outline-white{
-    color:#2997ff;
-    border:1px solid #2997ff;
+.ipad p {
+    color: #ccc;
 }
 
-.hero-img{
-    width:90%;
-    max-width:1050px;
-    height:350px;
-    object-fit:cover;
-    display:block;
-    margin:30px auto 0;
+
+/* =========================
+   BUTTONS
+========================= */
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
 }
 
-.phone-img{
-    object-fit:contain;
+.blue-button,
+.outline-button {
+    display: inline-block;
+
+    padding: 12px 20px;
+
+    border-radius: 25px;
+
+    font-size: 15px;
 }
 
-.duo{
-    object-fit:cover;
+.blue-button {
+    background-color: #0071e3;
+    color: white;
 }
 
-.small-text{
-    color:#777;
-    font-size:13px;
-    line-height:18px;
+.blue-button:hover {
+    background-color: #005bb5;
 }
 
-.watch{
-    min-height:560px;
+.outline-button {
+    border: 1px solid #0071e3;
+    color: #0071e3;
 }
 
-.watch h2{
-    font-size:30px;
+.outline-button:hover {
+    background-color: #0071e3;
+    color: white;
 }
 
-.watch h2 span{
-    font-weight:400;
+
+/* =========================
+   PRODUCT GRID
+========================= */
+
+.products {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+
+    padding: 12px;
 }
 
-.watch-img{
-    object-fit:cover;
+.product-card {
+    min-height: 600px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 40px;
+
+    overflow: hidden;
 }
 
-footer{
-    background:#f5f5f7;
-    text-align:center;
-    padding:25px;
-    font-size:12px;
+.card-content {
+    margin-bottom: 30px;
 }
 
-@media(max-width:900px){
-    .nav-links,
-    .nav-icons{
-        display:none;
+.product-card h2 {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.product-card img {
+    width: 450px;
+    max-width: 90%;
+}
+
+
+/* Individual Cards */
+
+.macbook {
+    background-color: #f5f5f7;
+}
+
+.watch {
+    background-color: #f7f7f7;
+}
+
+.airpods {
+    background-color: #eeeeee;
+}
+
+.accessories {
+    background-color: #e9f1ff;
+}
+
+
+/* =========================
+   ENTERTAINMENT
+========================= */
+
+.entertainment {
+    min-height: 450px;
+
+    background-color: #111;
+
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 40px;
+}
+
+.entertainment h2 {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.entertainment p {
+    font-size: 18px;
+    color: #ccc;
+
+    max-width: 600px;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background-color: #f5f5f7;
+
+    padding: 50px 8% 20px;
+}
+
+.footer-columns {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 40px;
+
+    padding-bottom: 40px;
+
+    border-bottom: 1px solid #ccc;
+}
+
+.footer-columns h3 {
+    font-size: 14px;
+
+    margin-bottom: 15px;
+}
+
+.footer-columns a {
+    display: block;
+
+    color: #555;
+
+    font-size: 13px;
+
+    margin-bottom: 10px;
+}
+
+.footer-columns a:hover {
+    color: #0071e3;
+}
+
+.footer-bottom {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding-top: 20px;
+
+    color: #666;
+
+    font-size: 12px;
+}
+
+
+/* ==================================================
+   RESPONSIVE DESIGN
+   TABLET
+================================================== */
+
+@media (max-width: 1000px) {
+
+    .navbar {
+        padding: 0 4%;
     }
 
-    .menu-btn{
-        display:block;
+    .nav-links {
+        gap: 12px;
     }
 
-    .mobile-menu{
-        position:absolute;
-        top:44px;
-        left:0;
-        width:100%;
-        background:#161617;
-        padding:20px 30px;
-        flex-direction:column;
-        gap:18px;
+    .nav-links a {
+        font-size: 11px;
     }
 
-    #menu:checked ~ .mobile-menu{
-        display:flex;
+    .hero {
+        min-height: 550px;
     }
 
-    .mobile-menu a{
-        color:white;
-        text-decoration:none;
-        font-size:18px;
-        padding:8px 0;
-        border-bottom:1px solid #333;
+    .hero h1 {
+        font-size: 45px;
     }
 
-    .hero{
-        padding-top:30px;
+    .hero h2 {
+        font-size: 24px;
     }
 
-    .black{
-        min-height:500px;
+    .products {
+        grid-template-columns: 1fr;
     }
 
-    .light{
-        min-height:530px;
+    .product-card {
+        min-height: 550px;
     }
 
-    .hero h1{
-        font-size:36px;
-    }
-
-    .hero p{
-        font-size:18px;
-    }
-
-    .hero-img{
-        width:92%;
-        height:280px;
-    }
-
-    .watch{
-        min-height:500px;
+    .footer-columns {
+        grid-template-columns: 1fr 1fr;
     }
 }
 
-@media(max-width:500px){
-    .navbar,
-    .nav-container{
-        height:48px;
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 600px) {
+
+    /* Navbar */
+
+    .navbar {
+        height: 55px;
+
+        padding: 0 20px;
     }
 
-    .mobile-menu{
-        top:48px;
+    .nav-links {
+        display: none;
     }
 
-    .hero{
-        padding-top:28px;
+    .apple-logo {
+        font-size: 17px;
     }
 
-    .hero h1{
-        font-size:32px;
+    .nav-icons {
+        gap: 12px;
     }
 
-    .hero p{
-        font-size:17px;
+
+    /* Banner */
+
+    .top-banner {
+        padding: 15px 10px;
+
+        font-size: 12px;
     }
 
-    .buttons{
-        gap:8px;
+    .top-banner p {
+        display: block;
+
+        margin-bottom: 5px;
     }
 
-    .buttons a{
-        padding:8px 16px;
-        font-size:12px;
+
+    /* Hero */
+
+    .hero {
+        min-height: 500px;
+
+        padding: 50px 15px;
     }
 
-    .hero-img{
-        width:94%;
-        height:220px;
-        margin-top:25px;
+    .hero h1 {
+        font-size: 38px;
     }
 
-    .first .hero-img{
-        height:230px;
+    .hero h2 {
+        font-size: 21px;
     }
 
-    .black{
-        min-height:430px;
+    .hero p {
+        font-size: 15px;
     }
 
-    .light{
-        min-height:450px;
+    .hero img {
+        width: 350px;
     }
 
-    .small-text{
-        font-size:10px;
-        line-height:15px;
+
+    /* Buttons */
+
+    .buttons {
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 10px;
     }
 
-    .watch{
-        min-height:430px;
+    .blue-button,
+    .outline-button {
+        width: 140px;
+
+        text-align: center;
     }
 
-    .watch h2{
-        font-size:24px;
+
+    /* Product Cards */
+
+    .products {
+        grid-template-columns: 1fr;
+
+        padding: 8px;
     }
 
-    footer{
-        font-size:10px;
-        padding:18px;
-    }
-}
+    .product-card {
+        min-height: 450px;
 
-@media(max-width:350px){
-    .hero h1{
-        font-size:28px;
+        padding: 25px 15px;
     }
 
-    .hero-img{
-        height:190px;
+    .product-card h2 {
+        font-size: 30px;
     }
 
-    .mobile-menu a{
-        font-size:16px;
+    .product-card p {
+        font-size: 15px;
+    }
+
+    .product-card img {
+        width: 300px;
+    }
+
+
+    /* Entertainment */
+
+    .entertainment {
+        min-height: 350px;
+
+        padding: 30px 20px;
+    }
+
+    .entertainment h2 {
+        font-size: 32px;
+    }
+
+    .entertainment p {
+        font-size: 15px;
+    }
+
+
+    /* Footer */
+
+    footer {
+        padding: 35px 25px 20px;
+    }
+
+    .footer-columns {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+
+        gap: 10px;
     }
 }
